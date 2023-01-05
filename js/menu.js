@@ -10,4 +10,4 @@ const menuBtn = document.querySelector('#menu-button');
 const menuCloseBtn = document.querySelector('#menu-close-button')
 
 menuBtn.addEventListener("click", () => toggleMenu());
-menuCloseBtn.addEventListener("click", () => toggleMenu()) 
+menuCloseBtn.addEventListener("click", () => toggleMenu())

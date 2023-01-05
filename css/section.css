@@ -34,10 +34,9 @@ section > div.card-frame {
     justify-content: space-between;
     margin: 1vh 0;
     width: 100%;
-    height: 12%;
     padding: 2vh 1vh;
     background-color: #fff;
-    
+    border-radius: .5vw;
 }
 
 section > div.card-frame > h1 {
@@ -60,4 +59,62 @@ section > div.card-frame > h2 {
 section > div.card-frame > h3 {
     font-weight: 300;
     font-size: 1.4vh;
+}
+
+/* new card register */
+section > div.card-frame > input, textarea {
+    border: none;
+    outline: none;
+}
+
+section > div.card-frame > input.new-card-title {
+    font-size: 2vh;
+    font-weight: 700;
+}
+
+section > div.card-frame > textarea.new-card-content {
+    resize: none;
+    height: 8vh;
+    font-size: 1.7vh;
+    font-weight: 500;
+}
+
+section > div.card-frame > div.card-button-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40%;
+}
+
+section > div.card-frame > div.card-button-area > button {
+    border: none;
+    border-radius: .3vw;
+    width: 45%;
+    padding: .8vh 0;
+    cursor: pointer;
+    font-size: 1.7vh;
+}
+
+section > div.card-frame > div.card-button-area > button#register-cancel-button {
+    margin-left: 2.5%;
+    color: #828282;
+    background-color: #e0e0e0;
+}
+
+section > div.card-frame > div.card-button-area > button#register-cancel-button:hover {
+    margin-left: 2.5%;
+    color: #fff;
+    background-color: #828282;
+}
+
+section > div.card-frame > div.card-button-area > button#register-accept-button {
+    margin-right: 2.5%;
+    color: #fff;
+    background-color: #86c5fe;
+}
+
+section > div.card-frame > div.card-button-area > button#register-accept-button:hover {
+    margin-right: 2.5%;
+    color: #fff;
+    background-color: #0175DE;
 }

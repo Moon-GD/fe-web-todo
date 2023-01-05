@@ -20,6 +20,8 @@
 
     <!-- custom js -->
     <script defer src="/js/menu.js"></script>
+    <script defer src="/js/section.js"></script>
+    <script defer src="/js/cardRegisteration.js"></script>
 </head>
 <body>
     <main>
@@ -41,14 +43,14 @@
                 </div>
                 <div class="card-frame">
                     <h1>Github 공부하기
-                        <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark card-close-button"></i>
                     </h1>
                     <h2>add, commit, push</h2>
                     <h3>author by web</h3>
                 </div>
                 <div class="card-frame">
                     <h1>블로그에 포스팅할 것
-                        <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark card-close-button"></i>
                     </h1>
                     <h2>* Github 공부내용</h2>
                     <h3>author by web</h3>
@@ -65,7 +67,7 @@
                 </div>
                 <div class="card-frame">
                     <h1>HTML/CSS 공부하기
-                        <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark card-close-button"></i>
                     </h1>
                     <h2>input 태그 실습</h2>
                     <h3>author by web</h3>
@@ -80,7 +82,14 @@
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
-                <div>카드 영역</div>
+                <div class="card-frame">
+                    <input type="text" class="new-card-title" placeholder="제목을 입력하세요">
+                    <textarea row="3" maxlength="500" class="new-card-content" placeholder="내용을 입력하세요" id="register-form"></textarea>
+                    <div class="card-button-area">
+                        <button id="register-cancel-button">취소</button>
+                        <button id="register-accept-button">등록</button>
+                    </div>
+                </div>
             </section>
             <!-- 메뉴 -->
             <menu>
