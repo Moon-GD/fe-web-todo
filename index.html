@@ -22,6 +22,9 @@
     <script defer src="/js/menu.js"></script>
     <script defer src="/js/section.js"></script>
     <script defer src="/js/cardRegisteration.js"></script>
+    <script defer type="module" src="/js/drag/addDragEvent.js"></script>
+    <script defer type="module" src="/js/drag/dragEffect.js"></script>
+    <script defer type="module" src="/js/drag/dragIDManager.js"></script>
 </head>
 <body>
     <main>
@@ -41,14 +44,14 @@
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
-                <div class="card-frame">
+                <div class="card-frame" draggable="true" id="1">
                     <h1>Github 공부하기
                         <i class="fa-solid fa-xmark card-close-button"></i>
                     </h1>
                     <h2>add, commit, push</h2>
                     <h3>author by web</h3>
                 </div>
-                <div class="card-frame">
+                <div class="card-frame" draggable="true" id="2">
                     <h1>블로그에 포스팅할 것
                         <i class="fa-solid fa-xmark card-close-button"></i>
                     </h1>
@@ -65,7 +68,7 @@
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
-                <div class="card-frame">
+                <div class="card-frame" draggable="true" id="3">
                     <h1>HTML/CSS 공부하기
                         <i class="fa-solid fa-xmark card-close-button"></i>
                     </h1>
