@@ -1,0 +1,63 @@
+section > div.section-header {
+    position: relative;
+    width: 100%;
+    padding: 0.8vh;
+    font-size: 2.2vh;
+    font-weight: 700;
+}
+
+/* section-header */
+
+section > div.section-header > span {
+    padding:0.1vw .5vw 0;
+    background-color: #BDBDBD;
+    border-radius: 50%;
+}
+
+section > div.section-header > div.button-area {
+    position: absolute;
+    top: 0.8vh;
+    right: 0.8vh;
+}
+
+section > div.section-header > div.button-area > i {
+    cursor: pointer;
+    text-align: right;
+    font-size: 80%;
+    margin: 0 0.4vw;
+}
+
+/* card */
+section > div.card-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1vh 0;
+    width: 100%;
+    height: 12%;
+    padding: 2vh 1vh;
+    background-color: #fff;
+    
+}
+
+section > div.card-frame > h1 {
+    position: relative;
+    font-weight: 700;
+    font-size: 2vh;
+}
+
+section > div.card-frame > h1 > i{
+    position: absolute;
+    right: 2vh;
+    cursor: pointer;
+} 
+
+section > div.card-frame > h2 {
+    font-weight: 500;
+    font-size: 1.7vh;
+}
+
+section > div.card-frame > h3 {
+    font-weight: 300;
+    font-size: 1.4vh;
+}
