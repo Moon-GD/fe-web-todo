@@ -19,13 +19,14 @@
     <link rel="stylesheet" href="css/section.css">
 
     <!-- custom js -->
+    <script defer src="/js/menu.js"></script>
 </head>
 <body>
     <main>
         <!-- 헤더 -->
         <header>
             <h1>TO-DO LIST</h1>
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" id="menu-button"></i>
         </header>
         <!-- 본문 -->
         <article>
@@ -83,7 +84,45 @@
             </section>
             <!-- 메뉴 -->
             <menu>
-                1
+                <section id="menu-frame">
+                    <div class="menu-header">
+                        <i class="fa-solid fa-xmark" id="menu-close-button"></i>
+                    </div>
+                    <div class="menu-content">
+                        <ul class="menu-log-frame">
+                            <li>
+                                <span>🥳</span>
+                                <div class="menu-log-textarea">
+                                    <h2>@sam</h2>
+                                    <h1>
+                                        HTML/CSS공부하기를 해야할 일에서 하고 있는 일로 이동하였습니다.
+                                    </h1>
+                                    <h3>1분 전</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <span>🥳</span>
+                                <div class="menu-log-textarea">
+                                    <h2>@sam</h2>
+                                    <h1>
+                                        해야할 일에 HTML/CSS 공부하기를 등록하였습니다.
+                                    </h1>
+                                    <h3>1분 전</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <span>🥳</span>
+                                <div class="menu-log-textarea">
+                                    <h2>@sam</h2>
+                                    <h1>
+                                        해야할 일에 블로그에 포스팅할 것을 등록하였습니다.
+                                    </h1>
+                                    <h3>1분 전</h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </menu>
         </article>
     </main>
