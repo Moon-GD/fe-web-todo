@@ -7,8 +7,15 @@ function makeShadedNode() {
     return movedCard
 }
 
+function makeLightNode() {
+    let movedCard = document.getElementById(manager.getID())
+    movedCard.style.opacity = 1
+
+    return movedCard
+}
+
 function addChildToParent(parentNode, childNode) {
     parentNode.after(childNode);
 }
 
-export { makeShadedNode, addChildToParent }
+export { makeShadedNode, makeLightNode, addChildToParent }
