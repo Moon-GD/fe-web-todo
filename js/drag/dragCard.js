@@ -10,12 +10,12 @@ function dragCard(parentNode, event) {
 function dragOverCard(parentNode, event) {
     event.preventDefault();
     parentNode.after(makeShadedNode())
+    cardCounts();
 }
 
 function dropCard(parentNode) {
     let child = makeLightNode();
     addChildToParent(parentNode, child)
-    cardCounts();
 }
 
 export { dragCard, dragOverCard, dropCard }

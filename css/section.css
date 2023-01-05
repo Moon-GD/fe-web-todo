@@ -62,6 +62,10 @@ section > div.card-frame > h3 {
 }
 
 /* new card register */
+section > div.card-frame.card-register-form {
+    display: none;
+}
+
 section > div.card-frame > input, textarea {
     border: none;
     outline: none;

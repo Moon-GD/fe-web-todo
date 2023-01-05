@@ -3,6 +3,10 @@ body {
     overflow-x: hidden;
 }
 
+.hidden.card-frame {
+    display: none;
+}
+
 main {
     width: 90vw;
     height: 100vh;

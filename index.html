@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/modal.css">
 
     <!-- custom js -->
+    <script defer type="module" src="/js/common.js"></script>
     <script defer src="/js/menu.js"></script>
     <script defer type="module" src="/js/section.js"></script>
     <script defer type="module" src="/js/cardRegisteration.js"></script>
@@ -89,7 +90,16 @@
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
-                <div class="card-frame">
+                <!-- 안 보이는 카드 등록 폼 -->
+                <div class="hidden card-frame" draggable="true">
+                    <h1>Github 공부하기
+                        <i class="fa-solid fa-xmark card-close-button"></i>
+                    </h1>
+                    <h2>add, commit, push</h2>
+                    <h3>author by web</h3>
+                </div>
+                <!-- 안 보이는 카드 등록 폼 -->
+                <div class="card-register-form card-frame">
                     <input type="text" class="new-card-title" placeholder="제목을 입력하세요">
                     <textarea row="3" maxlength="500" class="new-card-content" placeholder="내용을 입력하세요" id="register-form"></textarea>
                     <div class="card-button-area">
