@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="item.css" />
     <link rel="stylesheet" href="menu.css" />
     <link rel="stylesheet" href="style.css" />
-    
   </head>
+
   <body>
+    <!--메뉴 -->
     <div class="menuWrapper">
       <div class="menuBox">
         <span class="material-symbols-outlined" id="menuCloseBtn">close</span>
@@ -31,25 +32,36 @@
           <div class="logContent"></div>
           <div class="logTime"></div>
         </div>
+        </div>
       </div>
     </div>
-      
-    </div>
+
+    <!--헤더-->
     <header>
       <h1>TO-DO LIST</h1>
       <span class="material-symbols-outlined" id="hamburgerBtn">menu</span>
     </header>
+
     <div class="listWrapper">
+      <!--todo-->
       <div class="todoBox">
         <div class="listTitleBox">
           <h3>해야할 일</h3>
           <div class="countBox">
             <div class="countNum">1</div>
           </div>
-          <span class="material-symbols-outlined" id="addBtn">add</span>
-          <span class="material-symbols-outlined" id="closeBtn">close</span>
+          <span class="material-symbols-outlined addBtn" id="addTodoBtn">add</span>
+          <span class="material-symbols-outlined closeBtn" id="closeTodoBtn">close</span>
         </div>
         <ul class="itemWrapper">
+          <li class="itemAddBox hidden itemTodoAddBox">
+            <input type="text" id="titleInput" required placeholder="제목을 입력하세요">
+            <input type="text" id="contentsInput" required placeholder="내용을 입력하세요">
+            <div class="BtnWrapper">
+              <div class="cancelBtn cancelTodoBtn"><div class="cancelBtnText">취소</div></div>
+              <div class="registerBtn"><div class="registerBtnText">등록</div></div>
+            </div>
+          </li>
           <li class="itemBox">
             <div class="itemTitleBox">
               <div class="itemTitle">블로그에 포스팅할 것</div>
@@ -63,16 +75,26 @@
           </li>
         </ul>
       </div>
+
+      <!--doing-->
       <div class="doingBox">
         <div class="listTitleBox">
           <h3>하고 있는 일</h3>
           <div class="countBox">
             <div class="countNum">1</div>
           </div>
-          <span class="material-symbols-outlined" id="addBtn">add</span>
-          <span class="material-symbols-outlined" id="closeBtn">close</span>
+          <span class="material-symbols-outlined addBtn" id="addDoingBtn">add</span>
+          <span class="material-symbols-outlined closeBtn" id="closeDoingBtn">close</span>
         </div>
         <ul class="itemWrapper">
+          <li class="itemAddBox hidden itemDoingAddBox">
+            <input type="text" id="titleInput" required placeholder="제목을 입력하세요">
+            <input type="text" id="contentsInput" required placeholder="내용을 입력하세요">
+            <div class="BtnWrapper">
+              <div class="cancelBtn cancelDoingBtn"><div class="cancelBtnText">취소</div></div>
+              <div class="registerBtn"><div class="registerBtnText">등록</div></div>
+            </div>
+          </li>
           <li class="itemBox">
             <div class="itemTitleBox">
               <div class="itemTitle">블로그에 포스팅할 것</div>
@@ -86,16 +108,27 @@
           </li>
         </ul>
       </div>
+
+      <!--done-->
       <div class="doneBox">
         <div class="listTitleBox">
           <h3>완료한 일</h3>
           <div class="countBox">
             <div class="countNum">1</div>
           </div>
-          <span class="material-symbols-outlined" id="addBtn">add</span>
-          <span class="material-symbols-outlined" id="closeBtn">close</span>
+          <span class="material-symbols-outlined addBtn" id="addDoneBtn">add</span>
+          <span class="material-symbols-outlined closeBtn" id="closeDoneBtn">close</span>
         </div>
         <ul class="itemWrapper">
+          <li class="itemAddBox hidden itemDoneAddBox">
+            <input type="text" id="titleInput" required placeholder="제목을 입력하세요">
+            <input type="text" id="contentsInput" required placeholder="내용을 입력하세요">
+            <div class="BtnWrapper">
+              <div class="cancelBtn cancelDoneBtn"><div class="cancelBtnText">취소</div></div>
+              <div class="registerBtn"><div class="registerBtnText">등록</div></div>
+            </div>
+            
+          </li>
           <li class="itemBox">
             <div class="itemTitleBox">
               <div class="itemTitle">블로그에 포스팅할 것</div>
@@ -111,5 +144,5 @@
     </div>
   </body>
   <script src="script.js"></script>
-  <script src="close.js"></script>
+  <script src="add.js"></script>
 </html>

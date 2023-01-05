@@ -44,25 +44,29 @@ h1 {
   margin: auto;
   height: fit-content;
 }
-#addBtn {
+.addBtn {
   float: right;
   color: #bdbdbd;
   margin-left: auto;
   font-size: 27px;
+  cursor: pointer;
 }
-#addBtn:hover {
+.addBtn:hover {
   float: right;
   color: #0075de;
   margin-left: auto;
   font-size: 27px;
 }
-#closeBtn:hover {
+.closeBtn:hover {
   color: #ff4343;
   margin-left: 10px;
   cursor: pointer;
 }
-#closeBtn {
+.closeBtn {
   color: #bdbdbd;
   margin-left: 10px;
   cursor: pointer;
+}
+.hidden {
+  display: none;
 }
