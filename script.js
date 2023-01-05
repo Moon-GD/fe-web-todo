@@ -26,3 +26,6 @@ function SideMenuHide(){
 function ModifyCard(){
     prompt("수정할 내용 입력하세요");
 }
+
+const titleform = document.querySelector('#BoxTitleInput');
+const contentform = document.querySelector('#BoxContentInput');

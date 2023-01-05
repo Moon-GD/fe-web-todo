@@ -34,22 +34,16 @@
                     <i id = "RemoveButton" class="fa-solid fa-x"></i>
                 </div>
             </div>
-            <div draggable = "true" class = "ColumnList">
-                <ul ondblclick="ModifyCard()">
-                    <li id = "BoxTitle" list-style = "none">Github 공부하기</li>
-                    <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()"></i>
-                    <li id = "BoxContent">add, commit, push</li>
-                    <li id = "BoxAuthor">author by web</li>
-                </ul>
+            <div draggable = "true" class = "ColumnList" ondblclick="ModifyCard()">
+                <p id = "BoxTitle">Github 공부하기 <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()" style="float: right"></i></p>
+                <p id = "BoxContent">add, commit, push</p>
+                <p id = "BoxAuthor">author by web</p>
             </div>
-            <div draggable = "true" class = "ColumnList">
-                <ul ondblclick="ModifyCard()">
-                    <li id = "BoxTitle">블로그에 포스팅할 것</li>
-                    <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()"></i>
-                    <li id = "BoxContent">*Github 공부내용</li>
-                    <li id = "BoxContent">*모던 자바스크립트 1장 공부내용</lid>
-                    <li id = "BoxAuthor">author by web</li>
-                </ul>
+            <div draggable = "true" class = "ColumnList" ondblclick="ModifyCard()">
+                <p id = "BoxTitle">블로그에 포스팅할 것<i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()" style="float: right"></i></p>
+                <p id = "BoxContent">*Github 공부내용</p>
+                <p id = "BoxContent">*모던 자바스크립트 1장 공부내용</p>
+                <p id = "BoxAuthor">author by web</p>
             </div>
         </div>
         <div class = "ColumnClass">
@@ -61,13 +55,18 @@
                     <i id = "RemoveButton" class="fa-solid fa-x"></i>
                 </div>
             </div>
-            <div draggable = "true" class = "ColumnList">
-                <ul ondblclick="ModifyCard()">
-                    <li id = "BoxTitle">Github 공부하기</li>
-                    <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()"></i>
-                    <li id = "BoxContent">add, commit, push</li>
-                    <li id = "BoxAuthor">author by web</li>
-                </ul>
+            <div draggable = "true" class = "ColumnList" ondblclick="ModifyCard()">
+                <input id = "BoxTitleInput" type = "text" placeholder="제목을 입력하세요"></input>
+                <input id = "BoxContentInput" type = "text" placeholder="내용을 입력하세요"></input>
+                <div>
+                    <a href = "" class = "CancelButton">취소</a>
+                    <a href = "" class = "RegisterButton">등록</a>
+                </div>
+            </div>
+            <div draggable = "true" class = "ColumnList" ondblclick="ModifyCard()">
+                <p id = "BoxTitle">Github 공부하기 <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()" style="float: right"></i></p>
+                <p id = "BoxContent">add, commit, push</p>
+                <p id = "BoxAuthor">author by web</p>
             </div>
         </div>
         <div class = "ColumnClass">
@@ -79,13 +78,10 @@
                     <i id = "RemoveButton" class="fa-solid fa-x"></i>
                 </div>
             </div>
-            <div draggable = "true" class = "ColumnList">
-                <ul ondblclick="ModifyCard()">
-                    <li id = "BoxTitle">Github 공부하기</li>
-                    <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()"></i>
-                    <li id = "BoxContent">add, commit, push</li>
-                    <li id = "BoxAuthor">author by web</li>
-                </ul>
+            <div draggable = "true" class = "ColumnList" ondblclick="ModifyCard()">
+                <p id = "BoxTitle">Github 공부하기 <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()" style="float: right"></i></p>
+                <p id = "BoxContent">add, commit, push</p>
+                <p id = "BoxAuthor">author by web</p>
             </div>
         </div>
     </div>

@@ -1,17 +1,18 @@
 @charset "utf-8";
 
 body {
+    position: relative;
     background: color #e5e5e5;
     font-family: 'Noto Sans KR', sans-serif;
     font-style: normal;
 }
-
 li{
     list-style: none;
 }
 
 .TitleClass{
     display: block;
+    position: relative;
     height: 112px;
 }
 #Title{
@@ -33,11 +34,12 @@ li{
 
 .Columns{
     display: block;
-    float: left;
+    position: absolute;
+    left: 0;
     padding-left: 2%;
 }
 .ColumnClass{
-    width: 27%;
+    width: 30%;
     display: block;
     float: left;
 }
@@ -79,15 +81,14 @@ li{
     flex-grow: 0;
 }
 .ColumnList{
-    display: float;
+    left: 0;
     float: left;
     flex-direction: row;
     align-items: flex-start;
     padding: 16px;
     margin: 2px;
 
-    height: 128px;
-
+    width: auto;
     background: #FFFFFF;
 
     box-shadow: 0px 1px 30px rgba(224, 224, 224, 0.3);
@@ -136,7 +137,6 @@ li{
     order: 0;
     flex-grow: 0;
 }
-
 #BoxContent{
     width: 252px;
     height: 20px;
@@ -150,6 +150,77 @@ li{
     flex: none;
     order: 1;
     flex-grow: 0;
+}
+
+#BoxTitleInput{
+    width: 252px;
+    height: 23px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+
+    color: #010101;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+#BoxContentInput{
+    width: 252px;
+    height: 20px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #010101;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.CancelButton{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+
+    width: 134px;
+    height: 40px;
+
+    background: #E0E0E0;
+    border-radius: 6px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    text-align: center;
+    transition: all .5s;
+}
+.RegisterButton{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+    
+    width: 134px;
+    height: 40px;
+    
+    background: #0075DE;
+    border-radius: 6px;
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    text-align: center;
+    transition: all .5s;
 }
 
 #BoxAuthor{
