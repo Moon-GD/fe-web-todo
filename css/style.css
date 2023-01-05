@@ -180,8 +180,10 @@ li{
     order: 1;
     flex-grow: 0;
 }
-.CancelButton{
-    display: flex;
+#CancelButton{
+    text-align: center;
+    transition: all .5s;
+    display: block;
     position: relative;
     flex-direction: row;
     align-items: flex-start;
@@ -191,36 +193,34 @@ li{
     width: 134px;
     height: 40px;
 
+    color: #828282;
     background: #E0E0E0;
     border-radius: 6px;
 
     flex: none;
     order: 0;
     flex-grow: 0;
-
+}
+#RegisterButton{
     text-align: center;
     transition: all .5s;
-}
-.RegisterButton{
-    display: flex;
+    display: block;
     position: relative;
     flex-direction: row;
     align-items: flex-start;
     padding: 10px;
     gap: 10px;
-    
+
     width: 134px;
     height: 40px;
-    
-    background: #0075DE;
-    border-radius: 6px;
-    
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 
-    text-align: center;
-    transition: all .5s;
+    color: rbga(255, 255, 255, .4);
+    background: #86C6FF;
+    border-radius: 6px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 #BoxAuthor{

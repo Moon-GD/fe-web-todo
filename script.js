@@ -27,5 +27,10 @@ function ModifyCard(){
     prompt("수정할 내용 입력하세요");
 }
 
-const titleform = document.querySelector('#BoxTitleInput');
-const contentform = document.querySelector('#BoxContentInput');
+const titleform = document.getElementById('BoxTitleInput');
+const contentform = document.getElementById('BoxContentInput');
+const registerbutton = document.getElementById('RegisterButton');
+
+const registeractive = () => {
+    let titlevalue = titleform.ariaValueMax();
+}

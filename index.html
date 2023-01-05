@@ -14,8 +14,6 @@
 </style>
 </head>
 
-<script>
-</script>
 <script src = "script.js"></script>
 
 <body>
@@ -56,11 +54,11 @@
                 </div>
             </div>
             <div draggable = "true" class = "ColumnList" ondblclick="ModifyCard()">
-                <input id = "BoxTitleInput" type = "text" placeholder="제목을 입력하세요"></input>
-                <input id = "BoxContentInput" type = "text" placeholder="내용을 입력하세요"></input>
+                <input id = "BoxTitleInput" type = "text" placeholder="제목을 입력하세요" value = ""></input>
+                <input id = "BoxContentInput" type = "text" placeholder="내용을 입력하세요" value = "" maxlength = "500"></input>
                 <div>
-                    <a href = "" class = "CancelButton">취소</a>
-                    <a href = "" class = "RegisterButton">등록</a>
+                    <button id = "CancelButton" >취소</button>
+                    <button id = "RegisterButton" disabled = 'disabled'>등록</button>
                 </div>
             </div>
             <div draggable = "true" class = "ColumnList" ondblclick="ModifyCard()">
