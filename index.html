@@ -13,12 +13,31 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
     <title>TO DO LIST</title>
+    <link rel="stylesheet" href="item.css" />
+    <link rel="stylesheet" href="menu.css" />
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
+    <div class="menuWrapper">
+      <div class="menuBox">
+        <span class="material-symbols-outlined" id="menuCloseBtn">close</span>
+        <div class="logBox">
+        <div class="profile">
+          <div class="profileImg"></div>
+          <div class="profileName">@sam</div>
+        </div>
+        <div class="logContentBox">
+          <div class="logContent"></div>
+          <div class="logTime"></div>
+        </div>
+      </div>
+    </div>
+      
+    </div>
     <header>
       <h1>TO-DO LIST</h1>
-      <menu class="material-symbols-outlined" id="menu">menu</span>
+      <span class="material-symbols-outlined" id="hamburgerBtn">menu</span>
     </header>
     <div class="listWrapper">
       <div class="todoBox">
@@ -90,6 +109,7 @@
           </li>
         </ul>
     </div>
-
   </body>
+  <script src="script.js"></script>
+  <script src="close.js"></script>
 </html>
