@@ -13,35 +13,38 @@ li{
 .TitleClass{
     display: block;
     height: 112px;
-    background-color: #f5f5f7;
 }
-
 #Title{
     font-weight: 400;
     font-size: 32px;
     line-height: 46px;
     height: 46px;
-    left: 80px;
-    top: 33px;
     color: #010101;
     float: left;
-    margin-left: 2%;
+    margin: 2% 2% 2% 2%;
 }
-
 #MenuButton{
     float: right;
+    line-height: 46px;
+    height: 46px;
+    float: right;
+    margin: 2% 2% 2% 2%;
 }
 
-.ColumnClass{
-    width: 25%;
+.Columns{
+    display: block;
     float: left;
-    margin: 10px;
+    padding-left: 2%;
 }
-
+.ColumnClass{
+    width: 27%;
+    display: block;
+    float: left;
+}
 .ColumnHead{
     display: block;
+    padding-right: 10%;
 }
-
 #ColumnTitle{
     font-weight: 700;
     font-size: 18px;
@@ -55,8 +58,8 @@ li{
     flex: none;
     order: 0;
     flex-grow: 0;
+    float: left;
 }
-
 #ListCount{
     display: flex;
     flex-direction: row;
@@ -75,9 +78,30 @@ li{
     order: 1;
     flex-grow: 0;
 }
+.ColumnList{
+    display: float;
+    float: left;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    margin: 2px;
+
+    height: 128px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 1px 30px rgba(224, 224, 224, 0.3);
+    border-radius: 6px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
 
 .ButtonGroup{
+    position: relative;
     align-items: center;
+    float: right;
 }
 
 #AddButton:hover{
@@ -91,35 +115,11 @@ li{
 
 #RemoveButton:hover{
     color: #ff4343;
-
     -webkit-transition-duration: .5s;
     -moz-transition-duration: .5s;
     -ms-transition-duration: .5s;
     -o-transition-duration: .5s;
     transition-duration: .5s;
-}
-
-#RemoveButton:hover ~ .ColumnList{
-    color: #ffeeec;
-    border-color: #ff4343;
-}
-
-.ColumnList{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 16px;
-
-    height: 128px;
-
-    background: #FFFFFF;
-
-    box-shadow: 0px 1px 30px rgba(224, 224, 224, 0.3);
-    border-radius: 6px;
-
-    flex: none;
-    order: 2;
-    flex-grow: 0;
 }
 
 #BoxTitle{
@@ -167,6 +167,7 @@ li{
     flex-grow: 0;
 }
 
+
 .SideMenu{
     width: 452px;
     left: 988px;
@@ -179,7 +180,6 @@ li{
     float: right;
     visibility: hidden;
 }
-
 #SmileIcon{
     width: 40px;
     height: 40px;
@@ -190,7 +190,6 @@ li{
     order: 0;
     flex-grow: 0;
 }
-
 #MenuShow {
     -webkit-transition-duration: .5s;
     -moz-transition-duration: .5s;
@@ -198,7 +197,6 @@ li{
     -o-transition-duration: .5s;
     transition-duration: .5s;
 }
-
 #MenuShow:hover {
     -webkit-transform: translate(10px, 0);
     -moz-transform: translate(10px, 0);
