@@ -6,7 +6,12 @@ body {
     font-style: normal;
 }
 
+li{
+    list-style: none;
+}
+
 .TitleClass{
+    display: block;
     height: 112px;
     background-color: #f5f5f7;
 }
@@ -28,14 +33,16 @@ body {
 }
 
 .ColumnClass{
-    width: 30%;
+    width: 25%;
     float: left;
     margin: 10px;
 }
 
+.ColumnHead{
+    display: block;
+}
+
 #ColumnTitle{
-    font-family: 'Noto Sans KR';
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
@@ -54,7 +61,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     padding: 0px;
     margin: 5px;
     gap: 10px;
@@ -71,7 +77,7 @@ body {
 }
 
 .ButtonGroup{
-    float: right;
+    align-items: center;
 }
 
 #AddButton:hover{
@@ -81,6 +87,21 @@ body {
     -ms-transition-duration: .5s;
     -o-transition-duration: .5s;
     transition-duration: .5s;
+}
+
+#RemoveButton:hover{
+    color: #ff4343;
+
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -ms-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+#RemoveButton:hover ~ .ColumnList{
+    color: #ffeeec;
+    border-color: #ff4343;
 }
 
 .ColumnList{
@@ -105,8 +126,6 @@ body {
     width: 252px;
     height: 23px;
 
-    font-family: 'Noto Sans KR';
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 23px;
@@ -122,8 +141,6 @@ body {
     width: 252px;
     height: 20px;
 
-    font-family: 'Noto Sans KR';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -139,8 +156,6 @@ body {
     width: 252px;
     height: 17px;
 
-    font-family: 'Noto Sans KR';
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 17px;
@@ -185,9 +200,9 @@ body {
 }
 
 #MenuShow:hover {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    -webkit-transform: translate(10px, 0);
+    -moz-transform: translate(10px, 0);
+    -ms-transform: translate(10px, 0);
+    -o-transform: translate(10px, 0);
+    transform: translate(10px, 0);
  }

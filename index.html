@@ -15,26 +15,8 @@
 </head>
 
 <script>
-    function onDisplay(){
-        alert("Hello, World!");
-    }
-
-    function SideMenuShow(){
-        const sidemenu = document.getElementsByClassName('SideMenu')[0];
-
-        if(sidemenu.style.visibility !== 'visible'){
-            sidemenu.style.visibility = 'visible';
-        }
-    }
-
-    function SideMenuHide(){
-        const sidemenu = document.getElementsByClassName('SideMenu')[0];
-
-        if(sidemenu.style.visibility !== 'hidden'){
-            sidemenu.style.visibility = 'hidden';
-        }
-    }
 </script>
+<script src = "script.js"></script>
 
 <body>
     <div class = "TitleClass">
@@ -46,19 +28,26 @@
             <p id = "ColumnTitle">해야할 일<span id = "ListCount">2</span>
                 <div class = "ButtonGroup">
                     <i id = "AddButton" class="fa-sharp fa-solid fa-plus"></i>
-                    <i class="fa-solid fa-x" onclick="onDisplay()"></i>
+                    <i id = "RemoveButton" class="fa-solid fa-x"></i>
                 </div>
             </p>
         </div>
         <div draggable = "true" class = "ColumnList">
-            <p id = "BoxTitle">Github 공부하기</p>
-            <p id = "BoxContent">add, commit, push</p>
-            <p id = "BoxAuthor">author by web</p>
+            <ul ondblclick="ModifyCard()">
+                <li id = "BoxTitle" list-style = "none">Github 공부하기</li>
+                <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()"></i>
+                <li id = "BoxContent">add, commit, push</li>
+                <li id = "BoxAuthor">author by web</li>
+            </ul>
         </div>
         <div draggable = "true" class = "ColumnList">
-            <p id = "BoxTitle">블로그에 포스팅할 것</p>
-            <p id = "BoxContent">*Github 공부내용 *모던 자바스크립트 1장 공부내용</p>
-            <p id = "BoxAuthor">author by web</p>
+            <ul ondblclick="ModifyCard()">
+                <li id = "BoxTitle">블로그에 포스팅할 것</li>
+                <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()"></i>
+                <li id = "BoxContent">*Github 공부내용</li>
+                <li id = "BoxContent">*모던 자바스크립트 1장 공부내용</lid>
+                <li id = "BoxAuthor">author by web</li>
+            </ul>
         </div>
     </div>
     <div class = "ColumnClass">
@@ -66,14 +55,17 @@
             <p id = "ColumnTitle">하고있는 일<span id = "ListCount">2</span>
                 <div class = "ButtonGroup">
                     <i id = "AddButton" class="fa-sharp fa-solid fa-plus"></i>
-                    <i class="fa-solid fa-x" onclick="onDisplay()"></i>
+                    <i id = "RemoveButton" class="fa-solid fa-x"></i>
                 </div>
             </p>
         </div>
         <div draggable = "true" class = "ColumnList">
-            <p id = "BoxTitle">Github 공부하기</p>
-            <p id = "BoxContent">add, commit, push</p>
-            <p id = "BoxAuthor">author by web</p>
+            <ul ondblclick="ModifyCard()">
+                <li id = "BoxTitle">Github 공부하기</li>
+                <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()"></i>
+                <li id = "BoxContent">add, commit, push</li>
+                <li id = "BoxAuthor">author by web</li>
+            </ul>
         </div>
     </div>
     <div class = "ColumnClass">
@@ -81,14 +73,17 @@
             <p id = "ColumnTitle">완료한 일<span id = "ListCount">2</span>
                 <div class = "ButtonGroup">
                     <i id = "AddButton" class="fa-sharp fa-solid fa-plus"></i>
-                    <i class="fa-solid fa-x" onclick="onDisplay()"></i>
+                    <i id = "RemoveButton" class="fa-solid fa-x"></i>
                 </div>
             </p>
         </div>
         <div draggable = "true" class = "ColumnList">
-            <p id = "BoxTitle">Github 공부하기</p>
-            <p id = "BoxContent">add, commit, push</p>
-            <p id = "BoxAuthor">author by web</p>
+            <ul ondblclick="ModifyCard()">
+                <li id = "BoxTitle">Github 공부하기</li>
+                <i id = "RemoveButton" class="fa-solid fa-x" onclick="onDisplay()"></i>
+                <li id = "BoxContent">add, commit, push</li>
+                <li id = "BoxAuthor">author by web</li>
+            </ul>
         </div>
     </div>
 
