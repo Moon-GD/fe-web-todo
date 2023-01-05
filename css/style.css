@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+body {
+    background: color #e5e5e5;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+}
+
+.TitleClass{
+    height: 112px;
+    background-color: #f5f5f7;
+}
+
+#Title{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    height: 46px;
+    left: 80px;
+    top: 33px;
+    color: #010101;
+    float: left;
+    margin-left: 2%;
+}
+
+#MenuButton{
+    float: right;
+}
+
+.ColumnClass{
+    width: 30%;
+    float: left;
+    margin: 10px;
+}
+
+#ColumnTitle{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+
+    display: flex;
+    align-items: center;
+
+    color: #010101;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#ListCount{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 5px;
+    gap: 10px;
+
+    width: 26px;
+    height: 26px;
+
+    background: #BDBDBD;
+    border-radius: 20px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.ButtonGroup{
+    float: right;
+}
+
+#AddButton:hover{
+    color: #0075de;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -ms-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+.ColumnList{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+
+    height: 128px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 1px 30px rgba(224, 224, 224, 0.3);
+    border-radius: 6px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+#BoxTitle{
+    width: 252px;
+    height: 23px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+
+    color: #010101;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#BoxContent{
+    width: 252px;
+    height: 20px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #010101;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#BoxAuthor{
+    width: 252px;
+    height: 17px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+
+    color: #BDBDBD;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.SideMenu{
+    width: 452px;
+    left: 988px;
+    top: 0px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 0px 4px rgba(204, 204, 204, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    float: right;
+    visibility: hidden;
+}
+
+#SmileIcon{
+    width: 40px;
+    height: 40px;
+
+    background: url(Untitled-1.png);
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#MenuShow {
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -ms-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+#MenuShow:hover {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+ }

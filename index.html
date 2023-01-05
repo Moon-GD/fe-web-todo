@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=”utf-8” />
+<title>Todo Web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/55809f1341.js" crossorigin="anonymous"></script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap');
+</style>
+</head>
+
+<script>
+    function onDisplay(){
+        alert("Hello, World!");
+    }
+
+    function SideMenuShow(){
+        const sidemenu = document.getElementsByClassName('SideMenu')[0];
+
+        if(sidemenu.style.visibility !== 'visible'){
+            sidemenu.style.visibility = 'visible';
+        }
+    }
+
+    function SideMenuHide(){
+        const sidemenu = document.getElementsByClassName('SideMenu')[0];
+
+        if(sidemenu.style.visibility !== 'hidden'){
+            sidemenu.style.visibility = 'hidden';
+        }
+    }
+</script>
+
+<body>
+    <div class = "TitleClass">
+        <p id = "Title">TO-DO LIST</p>
+        <i class="fa-sharp fa-solid fa-bars fa-3x" id = "MenuButton" onclick = "SideMenuShow()"></i>
+    </div>
+    <div class = "ColumnClass">
+        <div class = "ColumnHead">
+            <p id = "ColumnTitle">해야할 일<span id = "ListCount">2</span>
+                <div class = "ButtonGroup">
+                    <i id = "AddButton" class="fa-sharp fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-x" onclick="onDisplay()"></i>
+                </div>
+            </p>
+        </div>
+        <div draggable = "true" class = "ColumnList">
+            <p id = "BoxTitle">Github 공부하기</p>
+            <p id = "BoxContent">add, commit, push</p>
+            <p id = "BoxAuthor">author by web</p>
+        </div>
+        <div draggable = "true" class = "ColumnList">
+            <p id = "BoxTitle">블로그에 포스팅할 것</p>
+            <p id = "BoxContent">*Github 공부내용 *모던 자바스크립트 1장 공부내용</p>
+            <p id = "BoxAuthor">author by web</p>
+        </div>
+    </div>
+    <div class = "ColumnClass">
+        <div class = "ColumnHead">
+            <p id = "ColumnTitle">하고있는 일<span id = "ListCount">2</span>
+                <div class = "ButtonGroup">
+                    <i id = "AddButton" class="fa-sharp fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-x" onclick="onDisplay()"></i>
+                </div>
+            </p>
+        </div>
+        <div draggable = "true" class = "ColumnList">
+            <p id = "BoxTitle">Github 공부하기</p>
+            <p id = "BoxContent">add, commit, push</p>
+            <p id = "BoxAuthor">author by web</p>
+        </div>
+    </div>
+    <div class = "ColumnClass">
+        <div class = "ColumnHead">
+            <p id = "ColumnTitle">완료한 일<span id = "ListCount">2</span>
+                <div class = "ButtonGroup">
+                    <i id = "AddButton" class="fa-sharp fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-x" onclick="onDisplay()"></i>
+                </div>
+            </p>
+        </div>
+        <div draggable = "true" class = "ColumnList">
+            <p id = "BoxTitle">Github 공부하기</p>
+            <p id = "BoxContent">add, commit, push</p>
+            <p id = "BoxAuthor">author by web</p>
+        </div>
+    </div>
+
+    <div class = "SideMenu" id = "MenuShow">
+        <i class="fa-sharp fa-solid fa-xmark fa-2x" onclick="SideMenuHide()"></i>
+
+        <div id = "UpdateLog">
+            <img id = "SmileIcon" src = "src/user img.png" alt = "Log Icon" style = "float: left">
+            <div class = "UpdateName">@sam</div>
+            <div class = "UpdateContent"><span style="font-weight: bold">등록/삭제/변경/이동</span> 하셨습니다.</div>
+            <div class = "UpdateTime">1분전</div>
+        </div>
+        <div id = "UpdateLog">
+            <img id = "SmileIcon" src = "src/user img.png" alt = "Log Icon" style = "float: left">
+            <div class = "UpdateName">@sam</div>
+            <div class = "UpdateContent"><span style="font-weight: bold">해야할 일</span>에 <span style="font-weight: bold">Github 공부하기</span>를 <span style="font-weight: bold">등록</span> 하였습니다.</div>
+            <div class = "UpdateTime">2분전</div>
+        </div>
+    </div>
+</body>
+</html>
