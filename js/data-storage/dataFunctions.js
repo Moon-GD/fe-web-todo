@@ -45,9 +45,9 @@ async function setData(path, action) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({}),
-      });
-
-      console.log(response, "response")
+      }).then((res) => {
+        console.log(res, "res")
+      })
 }
 
 setData(PATH_DOING_LIST, "ADD")

@@ -6,7 +6,7 @@ function dragCard(parentNode, event) {
     manager.setID(event.target.id)
     addChildToParent(parentNode, makeShadedNode())
     
-    console.log(parentNode.parentElement)
+    // console.log(parentNode.parentElement)
 }
 
 function dragOverCard(parentNode, event) {

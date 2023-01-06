@@ -40,6 +40,5 @@ function contentChange() {
 }
 
 registerInput.addEventListener("input", () => {
-    console.log("hello")
     contentChange();
 })

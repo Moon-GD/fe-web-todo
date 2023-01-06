@@ -2,6 +2,7 @@ import { findParentTag, clearDomValue } from "./common.js"
 import { makeCardDragEvent } from "./drag/addDragEvent.js"
 import { manager } from "./drag/dragIDManager.js"
 import { TODO, DOING, DONE, PATH_TODO_LIST, PATH_DOING_LIST, PATH_DONE_LIST, getData } from "./data-storage/dataFunctions.js"
+import { addCardDeleteEvent } from "./section.js"
 
 const RegisterForm = document.querySelector(".card-register-form")
 const RegisterInput = document.getElementById("register-form");
@@ -25,8 +26,8 @@ function makeCard(title, content) {
 
     newCard.id = manager.giveCardID()
     makeCardDragEvent(newCard)
-
-    newCard.children[0].innerHTML = title
+    
+    newCard.children[0].innerHTML = title + '<i class="fa-solid fa-xmark card-close-button"></i>'
     newCard.children[1].innerHTML = content
     newCard.children[2].innerHTML = "author by web"
 
@@ -41,6 +42,8 @@ async function cardCounts() {
     cardLengths.forEach((cardLength, index) => {
         cardLengths[index].innerHTML = todoLists[index].length
     })
+
+    addCardDeleteEvent()
 }
 
 async function cardShow() {
@@ -82,7 +85,6 @@ function appearRegisterForm(parentHeader) {
 
 function registerCard() {
     let NewCardContent = RegisterForm.children[1].value.replace(/\r\n|\n|\r/g,"<br>")
-    console.log(NewCardContent)
     let newCard = makeCard(RegisterForm.children[0].value, NewCardContent)
     hiddenNewCard.cloneNode(true)
     let currentSection = findParentTag(RegisterForm, "SECTION")
