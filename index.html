@@ -2,8 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="form.css"/>
+    <link rel="stylesheet" href="item.css"/>
+    <link rel="stylesheet" href="header.css"/>
+    <link rel="stylesheet" href="menu.css"/>
+    <title>To Do List</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -12,38 +17,30 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-    <title>TO DO LIST</title>
-    <link rel="stylesheet" href="item.css" />
-    <link rel="stylesheet" href="menu.css" />
-    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <!--메뉴 -->
     <div class="menuWrapper">
-      <div class="menuBox">
-        <span class="material-symbols-outlined" id="menuCloseBtn">close</span>
-        <div class="logBox">
-        <div class="profile">
-          <div class="profileImg"></div>
-          <div class="profileName">@sam</div>
-        </div>
-        <div class="logContentBox">
-          <div class="logContent"></div>
-          <div class="logTime"></div>
-        </div>
+        <div class="menuBox">
+          <span class="material-symbols-outlined" id="menuCloseBtn">close</span>
+          <div class="logBox">
+          <div class="profile">
+            <div class="profileImg"></div>
+            <div class="profileName">@sam</div>
+          </div>
+          <div class="logContentBox">
+            <div class="logContent"></div>
+            <div class="logTime"></div>
+          </div>
+          </div>
         </div>
       </div>
-    </div>
-
     <!--헤더-->
     <header>
-      <h1>TO-DO LIST</h1>
-      <span class="material-symbols-outlined" id="hamburgerBtn">menu</span>
-    </header>
-
-    <div class="listWrapper">
-      <!--todo-->
+        <h1>TO-DO LIST</h1>
+        <span class="material-symbols-outlined" id="hamburgerBtn">menu</span>
+      </header>
+    <div class="container">
       <div class="todoBox">
         <div class="listTitleBox">
           <h3>해야할 일</h3>
@@ -52,31 +49,18 @@
           </div>
           <span class="material-symbols-outlined addBtn" id="addTodoBtn">add</span>
           <span class="material-symbols-outlined closeBtn" id="closeTodoBtn">close</span>
-        </div>
-        <ul class="itemWrapper">
-          <li class="itemAddBox hidden itemTodoAddBox">
-            <input type="text" id="titleInput" required placeholder="제목을 입력하세요">
-            <input type="text" id="contentsInput" required placeholder="내용을 입력하세요">
+          </div>
+        <!--text 입력창(할일 입력창) 만들기-->
+        <form class="itemAddBox itemTodoAddBox hidden">
+            <input type="text" id="titleInput" placeholder="제목을 입력하세요">
+            <input type="text" id="detailInput" placeholder="내용을 입력하세요">
             <div class="BtnWrapper">
-              <div class="cancelBtn cancelTodoBtn"><div class="cancelBtnText">취소</div></div>
-              <div class="registerBtn"><div class="registerBtnText">등록</div></div>
+              <input type='button' value='취소'  class="cancelBtn cancelTodoBtn"></input>
+              <button type='submit' class="registerBtn registerTodoBtn">등록</button>
             </div>
-          </li>
-          <li class="itemBox">
-            <div class="itemTitleBox">
-              <div class="itemTitle">블로그에 포스팅할 것</div>
-              <span class="material-symbols-outlined" id="itemDeleteBtn">close</span>
-            </div>
-            <ul class="itemDetailBox">
-              <li class="itemDetail">github 공부 어쩌구</li>
-              <li class="itemDetail">모던 자바스크립트 1장 공부</li>
-            </ul>
-            <div class="authorBox"><div class="author">author by web</div></div>
-          </li>
-        </ul>
+        </form>
+      <ul class="itemWrapper"></ul>
       </div>
-
-      <!--doing-->
       <div class="doingBox">
         <div class="listTitleBox">
           <h3>하고 있는 일</h3>
@@ -85,32 +69,18 @@
           </div>
           <span class="material-symbols-outlined addBtn" id="addDoingBtn">add</span>
           <span class="material-symbols-outlined closeBtn" id="closeDoingBtn">close</span>
-        </div>
-        <ul class="itemWrapper">
-          <li class="itemAddBox hidden itemDoingAddBox">
-            <input type="text" id="titleInput" required placeholder="제목을 입력하세요">
-            <input type="text" id="contentsInput" required placeholder="내용을 입력하세요">
+          </div>
+        <!--text 입력창(할일 입력창) 만들기-->
+        <form class="itemAddBox itemDoingAddBox hidden">
+            <input type="text" id="titleInput" placeholder="제목을 입력하세요">
+            <input type="text" id="detailInput" placeholder="내용을 입력하세요">
             <div class="BtnWrapper">
-              <div class="cancelBtn cancelDoingBtn"><div class="cancelBtnText">취소</div></div>
-              <div class="registerBtn"><div class="registerBtnText">등록</div></div>
+              <input type='button' value='취소'  class="cancelBtn cancelDoingBtn"></input>
+              <button type='submit' class="registerBtn registerTodoBtn">등록</button>
             </div>
-          </li>
-          <li class="itemBox">
-            <div class="itemTitleBox">
-              <div class="itemTitle">블로그에 포스팅할 것</div>
-              <span class="material-symbols-outlined" id="itemDeleteBtn">close</span>
-            </div>
-            <ul class="itemDetailBox">
-              <li class="itemDetail">github 공부 어쩌구</li>
-              <li class="itemDetail">모던 자바스크립트 1장 공부</li>
-            </ul>
-            <div class="authorBox"><div class="author">author by web</div></div>
-          </li>
-        </ul>
-      </div>
-
-      <!--done-->
-      <div class="doneBox">
+        </form>
+      <ul class="itemWrapper"></ul>
+      </div><div class="doneBox">
         <div class="listTitleBox">
           <h3>완료한 일</h3>
           <div class="countBox">
@@ -118,31 +88,22 @@
           </div>
           <span class="material-symbols-outlined addBtn" id="addDoneBtn">add</span>
           <span class="material-symbols-outlined closeBtn" id="closeDoneBtn">close</span>
-        </div>
-        <ul class="itemWrapper">
-          <li class="itemAddBox hidden itemDoneAddBox">
-            <input type="text" id="titleInput" required placeholder="제목을 입력하세요">
-            <input type="text" id="contentsInput" required placeholder="내용을 입력하세요">
+          </div>
+        <!--text 입력창(할일 입력창) 만들기-->
+        <form class="itemAddBox itemDoneAddBox hidden">
+            <input type="text" id="titleInput" placeholder="제목을 입력하세요">
+            <input type="text" id="detailInput" placeholder="내용을 입력하세요">
             <div class="BtnWrapper">
-              <div class="cancelBtn cancelDoneBtn"><div class="cancelBtnText">취소</div></div>
-              <div class="registerBtn"><div class="registerBtnText">등록</div></div>
+              <input type='button' value='취소'  class="cancelBtn cancelDoneBtn"></input>
+              <button type='submit' class="registerBtn registerTodoBtn">등록</button>
             </div>
-            
-          </li>
-          <li class="itemBox">
-            <div class="itemTitleBox">
-              <div class="itemTitle">블로그에 포스팅할 것</div>
-              <span class="material-symbols-outlined" id="itemDeleteBtn">close</span>
-            </div>
-            <ul class="itemDetailBox">
-              <li class="itemDetail">github 공부 어쩌구</li>
-              <li class="itemDetail">모던 자바스크립트 1장 공부</li>
-            </ul>
-            <div class="authorBox"><div class="author">author by web</div></div>
-          </li>
-        </ul>
+        </form>
+      <ul class="itemWrapper"></ul>
+      </div>
+      <!-- id = inputField에 할일이 입력되고 + 버튼이 눌리면 할일이 나타날 공간 만들기-->
     </div>
-  </body>
+      </body>
+  <script src="main.js"></script>
+  <script src="menu.js"></script>
   <script src="script.js"></script>
-  <script src="add.js"></script>
 </html>
