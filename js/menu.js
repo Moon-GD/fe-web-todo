@@ -1,5 +1,8 @@
 function toggleMenu() {
     const menuBar = document.querySelector('menu');
+    const today = new Date()
+
+    console.log(today)
 
     menuBar.style.right === "0px" ? 
             menuBar.style.right = "-20%":

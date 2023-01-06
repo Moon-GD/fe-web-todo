@@ -10,6 +10,7 @@ const RegistrCancelBtn = document.querySelector("#register-cancel-button")
 const RegistrBtn = document.querySelector("#register-accept-button")
 const hiddenNewCard = document.querySelector(".hidden.card-frame");
 
+
 let todoLists = [[], [], []]
 
 async function updateTodoLists() {
@@ -111,6 +112,10 @@ let cardPlusBtns = document.querySelectorAll("i.card-plus-button")
 cardPlusBtns.forEach((cardPlusBtn) => {
     cardPlusBtn.addEventListener("click", () => appearRegisterForm(cardPlusBtn.parentElement.parentElement))
 })
+
+function modifyCard() {
+
+}
 
 RegistrCancelBtn.addEventListener("click", () => {
     registerCancel();
