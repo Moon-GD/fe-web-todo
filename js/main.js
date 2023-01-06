@@ -55,10 +55,6 @@ registerBtn.addEventListener("click", function () {
   }
 
   newItemBox.addEventListener("click", function () {
-    // 만들어진 list에 클릭 이벤트가 발생하면 줄 긋기
-    newItemBox.style.textDecoration = "line-through";
-  });
-  newItemBox.addEventListener("dblclick", function () {
     // list에 더블클릭 이벤트가 발생하면 할 일 리스트창에서 지우기
     toDoList.removeChild(newItemBox);
   });
