@@ -27,6 +27,14 @@ section > div.section-header > div.button-area > i {
     margin: 0 0.4vw;
 }
 
+section > div.section-header > div.button-area > i.fa-plus:hover {
+    color: #0075de;
+}
+
+section > div.section-header > div.button-area > i.fa-xmark:hover {
+    color: #ff4343;
+}
+
 /* card */
 section > div.card-frame {
     display: flex;
@@ -64,6 +72,7 @@ section > div.card-frame > h3 {
 /* new card register */
 section > div.card-frame.card-register-form {
     display: none;
+    height: 14.5vh;
 }
 
 section > div.card-frame > input, textarea {
@@ -84,7 +93,7 @@ section > div.card-frame > textarea.new-card-content {
 }
 
 section > div.card-frame > div.card-button-area {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: space-between;
     height: 40%;
@@ -113,12 +122,21 @@ section > div.card-frame > div.card-button-area > button#register-cancel-button:
 
 section > div.card-frame > div.card-button-area > button#register-accept-button {
     margin-right: 2.5%;
-    color: #fff;
-    background-color: #86c5fe;
+    cursor: default;
+    color: rgba(255, 255, 255, 0.4);
+    background-color: #86c6ff;
 }
 
-section > div.card-frame > div.card-button-area > button#register-accept-button:hover {
+section > div.card-frame > div.card-button-area > button#register-accept-button:enabled {
     margin-right: 2.5%;
     color: #fff;
-    background-color: #0175DE;
+    background-color: #0075de;
+    cursor: pointer;
+}
+
+section > div.card-frame > div.card-button-area > button#register-accept-button:enabled:hover {
+    margin-right: 2.5%;
+    color: #fff;
+    background-color: #005298;
+    cursor: pointer;
 }
