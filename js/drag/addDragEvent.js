@@ -1,25 +1,29 @@
 import { makeLightNode } from "./dragEffect.js";
 import { dragCard, dragOverCard, dropCard } from "./dragCard.js";
 
+function makeCardDragEvent(cardDom) {
+    cardDom.addEventListener("dragstart", (event) => {
+        dragCard(cardDom, event)
+    })
+
+    cardDom.addEventListener("dragover", (event) => {
+        dragOverCard(cardDom, event)
+    })
+
+    cardDom.addEventListener("drop", (event) => {
+        dropCard(cardDom, event)
+    })
+
+    cardDom.addEventListener("dragend", () => {
+        makeLightNode();
+    })
+}
+
 let cards = document.querySelectorAll(".card-frame");
 let sectionHeaders = document.querySelectorAll(".section-header")
 
 cards.forEach((card) => {
-    card.addEventListener("dragstart", (event) => {
-        dragCard(card, event)
-    })
-
-    card.addEventListener("dragover", (event) => {
-        dragOverCard(card, event)
-    })
-
-    card.addEventListener("drop", (event) => {
-        dropCard(card, event)
-    })
-
-    card.addEventListener("dragend", () => {
-        makeLightNode();
-    })
+    makeCardDragEvent(card)
 })
 
 sectionHeaders.forEach((sectionHeader) => {
@@ -31,3 +35,5 @@ sectionHeaders.forEach((sectionHeader) => {
         dropCard(sectionHeader)
     })
 })
+
+export { makeCardDragEvent }

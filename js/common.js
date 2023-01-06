@@ -9,4 +9,10 @@ function findParentTag(currentNode, parentTag) {
     return null;
 }
 
-export { findParentTag }
+function clearDomValue(textList) {
+    textList.forEach((text) => {
+        text.value = ""
+    })
+}
+
+export { findParentTag, clearDomValue }
