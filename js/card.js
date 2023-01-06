@@ -1,5 +1,6 @@
 import { findParentTag, clearDomValue } from "./common.js"
 import { makeCardDragEvent } from "./drag/addDragEvent.js"
+import { manager } from "./drag/dragIDManager.js"
 import { TODO, DOING, DONE, PATH_TODO_LIST, PATH_DOING_LIST, PATH_DONE_LIST, getData } from "./data-storage/dataFunctions.js"
 
 const RegisterForm = document.querySelector(".card-register-form")
@@ -15,19 +16,13 @@ async function updateTodoLists() {
     todoLists[DONE] = await getData(PATH_DONE_LIST)
 }
 
-// 임시 함수
-// 추후 변경 필요
-let id = 100
-function giveCardID() {
-    id += 1
-    return id;
-}
-
 function makeCard(title, content) {
     let newCard = hiddenNewCard.cloneNode(true)
+
     newCard.classList = "card-frame"
     newCard.setAttribute("draggable", true)
-    newCard.id = giveCardID()
+
+    newCard.id = manager.giveCardID()
     makeCardDragEvent(newCard)
 
     newCard.children[0].innerHTML = title
@@ -35,6 +30,16 @@ function makeCard(title, content) {
     newCard.children[2].innerHTML = "author by web"
 
     return newCard
+}
+
+async function cardCounts() {
+    await updateTodoLists()
+
+    let cardLengths = document.querySelectorAll("span.cardlist-length")
+
+    cardLengths.forEach((cardLength, index) => {
+        cardLengths[index].innerHTML = todoLists[index].length
+    })
 }
 
 async function cardShow() {
@@ -64,16 +69,6 @@ async function cardShow() {
     await cardCounts()
 }
 
-async function cardCounts() {
-    await updateTodoLists()
-
-    let cardLengths = document.querySelectorAll("span.cardlist-length")
-
-    cardLengths.forEach((cardLength, index) => {
-        cardLengths[index].innerHTML = todoLists[index].length
-    })
-}
-
 function appearRegisterForm(parentHeader) {
     RegisterForm.style.display = "block";
     parentHeader.after(RegisterForm)
@@ -85,11 +80,6 @@ function registerCard() {
     let currentSection = findParentTag(RegisterForm, "SECTION")
 
     RegisterForm.style.display = "none";
-
-    //  새로운 카드 id 부여
-    // 현재는 34번으로 임의 부여 중
-    newCard.classList = "card-frame"
-    newCard.id = 34
     
     makeCardDragEvent(newCard)
 
@@ -117,7 +107,6 @@ RegistrBtn.addEventListener("click", () => {
     registerCard();
 })
 
-cardCounts();
 cardShow();
 
 export { cardCounts }
